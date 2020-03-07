@@ -1,0 +1,32 @@
+<h6>Student List</h6>
+<h5>
+
+    <a href="/add">Add new Student</a>
+</h5>
+
+<table width="100%" border="2">
+    <tr>
+        <td>Roll No</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Action</td>
+    </tr>
+
+    {{#each studentList}}
+
+    <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.firstname}}</td>
+        <td>{{this.lastname}}</td>
+        <td>
+            <a href="/update?id={{this.id}}">Update</a>
+            <a href="/delete?id={{this.id}}">delete</a>
+
+        </td>
+    </tr>
+
+
+    {{/each}}
+
+
+</table>
